@@ -27,6 +27,8 @@
     "karma-jasmine-diff-reporter": "^0.3.2",
     "karma-phantomjs-launcher": "^0.2.0",
     "karma-webpack": "^1.7.0",
+    "less": "^2.6.1",
+    "less-loader": "^2.2.3",
     "lodash.range": "^3.0.1",
     "phantomjs": "^1.9.17",
     "react": ">=0.14.3",
@@ -34,6 +36,7 @@
     "react-codemirror": ">=0.1.2",
     "react-dom": ">=0.14.3",
     "react-hot-loader": "^1.2.8",
+    "redux": "^3.3.1",
     "style-loader": "^0.12.4",
     "webpack": "^1.10.1",
     "webpack-dev-server": "^1.10.1"
@@ -69,6 +72,8 @@
   "license": "MIT",
   "dependencies": {
     "performance-now": "^0.2.0",
-    "raf": "^3.1.0"
+    "raf": "^3.1.0",
+    "react-redux": "^4.4.1",
+    "redux": "^3.3.1"
   }
 }

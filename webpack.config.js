@@ -19,14 +19,15 @@ var plugins = [
   })
 ];
 var entry = {
-  'demo0-simple-transition': './demos/demo0-simple-transition/index.jsx',
-  'demo1-chat-heads': './demos/demo1-chat-heads/index.jsx',
-  'demo2-draggable-balls': './demos/demo2-draggable-balls/index.jsx',
-  'demo3-todomvc-list-transition': './demos/demo3-todomvc-list-transition/index.jsx',
-  'demo4-photo-gallery': './demos/demo4-photo-gallery/index.jsx',
-  'demo5-spring-parameters-chooser': './demos/demo5-spring-parameters-chooser/index.jsx',
-  'demo7-water-ripples': './demos/demo7-water-ripples/index.jsx',
-  'demo8-draggable-list': './demos/demo8-draggable-list/index.jsx',
+  //'demo0-simple-transition': './demos/demo0-simple-transition/index.jsx',
+  //'demo1-chat-heads': './demos/demo1-chat-heads/index.jsx',
+  //'demo2-draggable-balls': './demos/demo2-draggable-balls/index.jsx',
+  //'demo3-todomvc-list-transition': './demos/demo3-todomvc-list-transition/index.jsx',
+  //'demo4-photo-gallery': './demos/demo4-photo-gallery/index.jsx',
+  //'demo5-spring-parameters-chooser': './demos/demo5-spring-parameters-chooser/index.jsx',
+  //'demo7-water-ripples': './demos/demo7-water-ripples/index.jsx',
+  //'demo8-draggable-list': './demos/demo8-draggable-list/index.jsx',
+  'TodoList': './demos/TodoList/js/index.js',
 };
 
 if (process.env.NODE_ENV === 'development') {
@@ -64,19 +65,19 @@ module.exports = {
       exclude: /build|lib|bower_components|node_modules/,
       loaders: loaders
     }, {
-      test: /\.css$/,
-      loaders: ['style', 'css']
+      test: /\.less$/,
+      loaders: ['react-hot','style', 'css','less-loader']
     }],
-    preLoaders: [
-      {test: /\.jsx?$/, loader: 'eslint', exclude: /build|lib|bower_components|node_modules/},
-    ],
+    //preLoaders: [
+    //  {test: /\.jsx?$/, loader: 'eslint', exclude: /build|lib|bower_components|node_modules/}
+    //],
     noParse: [
       path.join(__dirname, 'node_modules', 'babel-core', 'browser.min.js')
-    ],
+    ]
   },
   resolve: {
-    extensions: ['', '.js', '.jsx']
+    extensions: ['', '.js', '.jsx', '.less']
   },
   plugins: plugins,
-  eslint: {configFile: '.eslintrc'},
+  //eslint: {configFile: '.eslintrc'}
 };
