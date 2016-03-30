@@ -1,10 +1,15 @@
 import React, { Component, PropTypes } from 'react';
 import Todo from './Todo';
-
+import {emitter} from './util'
 export default class TodoList extends Component {
-  render() {
+    componentWillMount(){
+        emitter.on('test',() =>{
+          setTimeout(()=>this.refs.list.scrollTop = this.refs.list.scrollHeight,0);
+        })
+    }
+    render() {
     return (
-        <ul className="list">
+        <ul className="list" ref="list">
           {this.props.todos.map((todo, index) =>
             <Todo {...todo}
               key={index}

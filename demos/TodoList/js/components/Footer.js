@@ -18,17 +18,11 @@ export default class Footer extends Component {
 
   render() {
     return (
-      <div>
-        <div className="title">
-          收集箱
-        </div>
         <ul className="class">
           <li>{this.renderFilter('SHOW_ALL', 'All')}</li>
           <li>{this.renderFilter('SHOW_COMPLETED', 'Completed')}</li>
           <li>{this.renderFilter('SHOW_ACTIVE', 'Active')}</li>
         </ul>
-      </div>
-
   )
   }
 }

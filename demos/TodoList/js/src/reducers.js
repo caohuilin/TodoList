@@ -30,13 +30,22 @@ function todos(state = [], action) {
     ...state.slice(action.index + 1)
     ];
     case TOGGLE_TODO:
-      return [
+      var last = [
         ...state.slice(0, action.index),
         Object.assign({}, state[action.index], {
           completed: !state[action.index].completed,
         }),
         ...state.slice(action.index + 1)
       ];
+      let com = [],uncom = [];
+      for( let i=0 ;i<last.length;i++){
+        if(last[i].completed == true){
+          com.push(last[i]);
+        }else{
+          uncom.push(last[i]);
+        }
+      }
+      return  uncom.concat(com);
     default:
       return state;
   }

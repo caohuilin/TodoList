@@ -5,6 +5,7 @@ import AddTodo from '../components/AddTodo';
 
 import TodoList from '../components/TodoList';
 import Footer from '../components/Footer';
+import Title from '../components/Title';
 
 require("./App.less");
 
@@ -15,7 +16,7 @@ class App extends Component {
     const { dispatch, visibleTodos, visibilityFilter } = this.props;
     return (
       <div>
-
+    <Title />
     <Footer
        filter={visibilityFilter}
        onFilterChange={nextFilter =>

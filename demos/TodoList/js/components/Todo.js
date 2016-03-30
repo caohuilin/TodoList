@@ -7,7 +7,6 @@ export default class Todo extends Component {
 
     style={{
       textDecoration: this.props.completed ? 'line-through' : 'none',
-        cursor: this.props.completed ? 'default' : 'pointer'
     }}>
     <input type="checkbox" checked={this.props.completed} onChange={this.props.onClick} />
     {this.props.text}
